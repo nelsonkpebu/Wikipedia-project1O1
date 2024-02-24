@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 4%;
+  font-weight: 400;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  color: rgb(6, 44, 170);
+  font-family: sans-serif;
+}
+
+#head-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#head-nav-left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#head-auth-nav {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+}
+
+#wikipedia-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#wikipedia-logo * {
+  white-space: nowrap;
+}
+
+#wikipedia-logo h2 {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+#wikipedia-logo span {
+  font-size: 12px;
+}
+
+#search {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  max-width: 500px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 20px;
+  margin-left: 60px;
+}
+
+#search > * {
+  border-radius: 0;
+  border: 1px #00000060 solid;
+}
+
+#search input[type="text"] {
+  outline: none;
+  flex: 4;
+  padding: 10px;
+  border: none;
+}
+
+#search > div {
+  display: flex;
+  padding-left: 10px;
+  flex: 4;
+}
+
+#search button {
+  flex: 1;
+  font-weight: 600;
+}
+
+#main-header {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#main-header::after {
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: #00000060;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px #00000060 solid;
+  gap: 100px;
+}
+
+nav a {
+  display: block;
+  padding: 10px 0 5px 0;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: rgb(6, 44, 170);
+  border-bottom: 2px rgb(6, 44, 170) solid;
+}
+
+nav a.active {
+  color: black;
+  border-bottom: 2px black solid;
+}
+
+nav > div,
+#nav-right > div {
+  display: flex;
+  gap: 10px;
+}
+
+#article-textarea {
+  flex: 1;
+  width: 100%;
+  height: 800px;
+  padding: 30px;
+  resize: none;
+  white-space: normal;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #73a2d1;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  #nav-right > div,
+  #head-auth-nav > a,
+  #search {
+    display: none;
+  }
+}
